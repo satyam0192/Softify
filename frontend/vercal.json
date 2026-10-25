@@ -1,0 +1,9 @@
+
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://softify-api-p7g1.onrender.com/api/:path*"
+    }
+  ]
+}
