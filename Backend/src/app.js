@@ -18,6 +18,7 @@ const artistRequestRoutes = require('./routes/artistRequest.routes')
 const allowedOrigins = [
     'http://localhost:5173',
     'https://softify-three.vercel.app',
+    'https://softify-git-main-satyam0192.vercel.app',
     process.env.FRONTEND_URL
 ].filter(Boolean);
 
