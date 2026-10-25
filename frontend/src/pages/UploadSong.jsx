@@ -46,7 +46,7 @@ function UploadSong() {
             setLoading(true)
 
             const response = await fetch(
-                'http://localhost:3000/api/music/upload',
+                `${import.meta.env.VITE_API_URL || 'http://localhost:3000/api'}/music/upload`,
                 {
                     method: 'POST',
                     credentials: 'include',

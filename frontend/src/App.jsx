@@ -25,7 +25,7 @@ import Playlists from './pages/Playlists.jsx'
 import PlaylistDetails from './pages/PlaylistDetails.jsx'
 import Sidebar from './components/Sidebar.jsx'
 
-const API_URL = 'http://localhost:3000/api/auth'
+const API_URL = `${import.meta.env.VITE_API_URL || 'http://localhost:3000/api'}/auth`
 
 function Login() {
   const [isRegister, setIsRegister] = useState(false)
@@ -210,7 +210,7 @@ function Home() {
     async function fetchSongs() {
       try {
         const response = await fetch(
-          'http://localhost:3000/api/music',
+          `${import.meta.env.VITE_API_URL || 'http://localhost:3000/api'}/music`,
           { credentials: 'include' }
         )
 
@@ -387,7 +387,7 @@ function ProtectedRoute({ allowedRoles, children }) {
     async function checkUser() {
       try {
         const response = await fetch(
-          'http://localhost:3000/api/auth/me',
+          `${import.meta.env.VITE_API_URL || 'http://localhost:3000/api'}/auth/me`,
           { credentials: 'include' }
         )
 

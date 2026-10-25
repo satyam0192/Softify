@@ -3,8 +3,7 @@ import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router'
 import { useMusicPlayer } from '../context/MusicPlayerContext.jsx'
 
-const API_URL = 'http://localhost:3000/api'
-
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api'
 function Navbar() {
   const [user, setUser] = useState(null)
   const [loading, setLoading] = useState(true)

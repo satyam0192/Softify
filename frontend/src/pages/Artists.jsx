@@ -12,7 +12,7 @@ function Artists() {
         async function fetchArtists() {
             try {
                 const response = await fetch(
-                    'http://localhost:3000/api/artists'
+                    `${import.meta.env.VITE_API_URL || 'http://localhost:3000/api'}/artists`
                 )
 
                 const data = await response.json()

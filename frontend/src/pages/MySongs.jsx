@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router'
 import Navbar from '../components/Navbar'
 
-const API_URL = 'http://localhost:3000/api'
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api'
 
 function MySongs() {
     const [songs, setSongs] = useState([])
